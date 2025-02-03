@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2686A98E-DF19-4F0A-993E-412F2381AB0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Diploma_Project</RootNamespace>
+    <AssemblyName>Diploma Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonUtils.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UrlLoader.cs" />
+    <Compile Include="Views\AboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LearnGodot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LearnGodot.Designer.cs">
+      <DependentUpon>LearnGodot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LearningMaterials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LearningMaterials.Designer.cs">
+      <DependentUpon>LearningMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LearnUnity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LearnUnity.Designer.cs">
+      <DependentUpon>LearnUnity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LearnUnrealEngine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LearnUnrealEngine.Designer.cs">
+      <DependentUpon>LearnUnrealEngine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Market.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Market.Designer.cs">
+      <DependentUpon>Market.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyGames.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MyGames.Designer.cs">
+      <DependentUpon>MyGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Register.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SendAReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SendAReport.Designer.cs">
+      <DependentUpon>SendAReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Services.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\Start Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presenters\Start Page.Designer.cs">
+      <DependentUpon>Start Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\WeeklyDiscounts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\WeeklyDiscounts.Designer.cs">
+      <DependentUpon>WeeklyDiscounts.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LearnGodot.resx">
+      <DependentUpon>LearnGodot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LearningMaterials.resx">
+      <DependentUpon>LearningMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LearnUnity.resx">
+      <DependentUpon>LearnUnity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LearnUnrealEngine.resx">
+      <DependentUpon>LearnUnrealEngine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Market.resx">
+      <DependentUpon>Market.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MyGames.resx">
+      <DependentUpon>MyGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SendAReport.resx">
+      <DependentUpon>SendAReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenters\Start Page.resx">
+      <DependentUpon>Start Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WeeklyDiscounts.resx">
+      <DependentUpon>WeeklyDiscounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unity Icon With text.png" />
+    <None Include="Resources\Godot Icon with text.png" />
+    <None Include="Unity.pdf" />
+    <None Include="Resources\Unreal Engine White.png" />
+    <None Include="Resources\Unreal Engine With Text.png" />
+    <None Include="Resources\Unreal Icon.png" />
+    <None Include="Resources\Godot_icon.png" />
+    <None Include="Resources\Godot.png" />
+    <None Include="Resources\Godot Icon 21.png" />
+    <None Include="Resources\godot icon1.png" />
+    <None Include="Resources\godot icon.png" />
+    <None Include="Resources\Godot Icon 2.png" />
+    <None Include="Resources\The Kift.png" />
+    <None Include="Resources\The Kift %281%29.png" />
+    <None Include="Resources\Poto.png" />
+    <None Include="Resources\Phras Fighters.png" />
+    <None Include="Resources\Potomania.png" />
+    <None Include="Resources\About us Photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Review Password Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Main Page.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Market Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Market Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Market Icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Market Icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Development Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About us Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unity Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign in Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign in Banner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign in Banner 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game Hub Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discounts Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts Image 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About us Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discounts Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services Banner1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
