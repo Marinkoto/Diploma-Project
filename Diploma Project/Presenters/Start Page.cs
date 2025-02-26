@@ -1,4 +1,5 @@
-﻿using Diploma_Project.Views;
+﻿using Diploma_Project.Presenters;
+using Diploma_Project.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,10 @@ namespace Diploma_Project
             InitializeComponent();
             market.LoadMarketItems();
             weeklyDiscounts.LoadMarketItems();
+            signIn.SignInCompleted += (s, e) =>
+            {
+                SignIn();
+            };
             CloseAllControls();
         }
 
@@ -41,6 +46,17 @@ namespace Diploma_Project
             }
         }
 
+        private void SignIn()
+        {
+            CheckOutToolStripMenuItem.Visible = true;
+            MyGamesToolStripMenuItem.Visible = true;
+            SignInToolStripMenuItem.Visible = false;
+            RegistrationToolStripMenuItem.Visible = false;
+            CloseAllControls();
+            MessageBox.Show("Влизането бе успешно!","Успех!",MessageBoxButtons.OK,
+                MessageBoxIcon.Information,MessageBoxDefaultButton.Button1);
+        }
+
         private void RegistrationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CloseAllControls();
@@ -49,7 +65,7 @@ namespace Diploma_Project
 
         private void StartPage_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void AboutUsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -136,6 +152,12 @@ namespace Diploma_Project
         {
             CloseAllControls();
             services.Show();
+        }
+
+        private void CheckOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Checkout checkout = new Checkout();
+            checkout.Show();
         }
     }
 }

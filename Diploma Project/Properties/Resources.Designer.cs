@@ -253,6 +253,16 @@ namespace Diploma_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Orders_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Orders Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Phone_Icon {
             get {
                 object obj = ResourceManager.GetObject("Phone Icon", resourceCulture);
@@ -296,6 +306,16 @@ namespace Diploma_Project.Properties {
         internal static System.Drawing.Bitmap Profile_Icon {
             get {
                 object obj = ResourceManager.GetObject("Profile Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purchases_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Purchases Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

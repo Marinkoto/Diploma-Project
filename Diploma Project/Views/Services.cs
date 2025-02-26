@@ -74,7 +74,7 @@ namespace Diploma_Project.Views
         {
             if (txtBoxNeeds.Text == "")
             {
-                txtBoxNeeds.Text = "Напиши ни защо да работим с теб";
+                txtBoxNeeds.Text = "Напиши ни твоите изисквания";
                 txtBoxNeeds.ForeColor = Color.Gray;
             }
         }
@@ -102,6 +102,11 @@ namespace Diploma_Project.Views
             {
                 dateTimePicker.ResetText();
             }
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

@@ -23,3 +23,7 @@ Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diplo
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnUnrealEngine.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.WeeklyDiscounts.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Services.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Presenters.AdminEntry.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminMarket.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Presenters.Checkout.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminQueue.resources

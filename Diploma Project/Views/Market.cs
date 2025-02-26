@@ -58,7 +58,7 @@ namespace Diploma_Project.Views
         {
 
         }
-        
+
         private void vScrollBar_Scroll(object sender, ScrollEventArgs e)
         {
             //itemHolder.VerticalScroll.Value = vScrollBar.Value; 

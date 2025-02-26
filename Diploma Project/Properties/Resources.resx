@@ -142,9 +142,6 @@
   <data name="X" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Email Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Email Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Sign in Banner 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sign in Banner 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +151,9 @@
   <data name="Phras Fighters" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Phras Fighters.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Godot_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Godot_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Unreal Engine White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unreal Engine White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +162,9 @@
   </data>
   <data name="Discounts_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Discounts Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Discounts Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Discounts Banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +181,8 @@
   <data name="Logo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background_Main_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background Main Page.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Services Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Services Banner3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Location Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Location Image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,8 +202,8 @@
   <data name="About us Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\About us Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background_Main_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Main Page.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Contacts Image 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Contacts Image 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,20 +211,23 @@
   <data name="Unity Icon With text" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unity Icon With text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Review_Password_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Review Password Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sign in Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sign in Banner1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Orders Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Game_Hub_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Game Hub Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sign in Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign in Banner1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Review_Password_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Review Password Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Register Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Register Banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Godot_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Godot_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Email Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Email Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="The Kift (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Kift (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,7 +235,7 @@
   <data name="About us Photo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\About us Photo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Services Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Services Banner1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Purchases Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purchases Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

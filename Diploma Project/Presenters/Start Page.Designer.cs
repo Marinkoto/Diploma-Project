@@ -34,7 +34,7 @@
             this.SignInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MyGamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BalanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CheckOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MarketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AccessoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +82,7 @@
             this.HomeToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.HomeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("HomeToolStripMenuItem.Image")));
             this.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem";
-            this.HomeToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
+            this.HomeToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.HomeToolStripMenuItem.Text = "Начало";
             this.HomeToolStripMenuItem.Click += new System.EventHandler(this.HomeToolStripMenuItem_Click);
             // 
@@ -92,12 +92,12 @@
             this.SignInToolStripMenuItem,
             this.RegistrationToolStripMenuItem,
             this.MyGamesToolStripMenuItem,
-            this.BalanceToolStripMenuItem});
+            this.CheckOutToolStripMenuItem});
             this.ProfileToolStripMenuItem.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ProfileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.ProfileToolStripMenuItem.Image = global::Diploma_Project.Properties.Resources.Profile_Icon;
+            this.ProfileToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ProfileToolStripMenuItem.Image")));
             this.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem";
-            this.ProfileToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.ProfileToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.ProfileToolStripMenuItem.Text = "Профил";
             // 
             // SignInToolStripMenuItem
@@ -128,14 +128,15 @@
             this.MyGamesToolStripMenuItem.Visible = false;
             this.MyGamesToolStripMenuItem.Click += new System.EventHandler(this.MyGamesToolStripMenuItem_Click);
             // 
-            // BalanceToolStripMenuItem
+            // CheckOutToolStripMenuItem
             // 
-            this.BalanceToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.BalanceToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BalanceToolStripMenuItem.Name = "BalanceToolStripMenuItem";
-            this.BalanceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.BalanceToolStripMenuItem.Text = "Баланс";
-            this.BalanceToolStripMenuItem.Visible = false;
+            this.CheckOutToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.CheckOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CheckOutToolStripMenuItem.Name = "CheckOutToolStripMenuItem";
+            this.CheckOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.CheckOutToolStripMenuItem.Text = "Количка";
+            this.CheckOutToolStripMenuItem.Visible = false;
+            this.CheckOutToolStripMenuItem.Click += new System.EventHandler(this.CheckOutToolStripMenuItem_Click);
             // 
             // MarketToolStripMenuItem
             // 
@@ -147,7 +148,7 @@
             this.MarketToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.MarketToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("MarketToolStripMenuItem.Image")));
             this.MarketToolStripMenuItem.Name = "MarketToolStripMenuItem";
-            this.MarketToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
+            this.MarketToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.MarketToolStripMenuItem.Text = "Пазар";
             // 
             // GamesToolStripMenuItem
@@ -155,7 +156,7 @@
             this.GamesToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.GamesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GamesToolStripMenuItem.Name = "GamesToolStripMenuItem";
-            this.GamesToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.GamesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.GamesToolStripMenuItem.Text = "Игри";
             this.GamesToolStripMenuItem.Click += new System.EventHandler(this.GamesToolStripMenuItem_Click);
             // 
@@ -164,7 +165,7 @@
             this.AccessoriesToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.AccessoriesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AccessoriesToolStripMenuItem.Name = "AccessoriesToolStripMenuItem";
-            this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.AccessoriesToolStripMenuItem.Text = "Аксесоари";
             // 
             // DevelopmentToolStripMenuItem
@@ -174,9 +175,9 @@
             this.GameEnginesToolStripMenuItem});
             this.DevelopmentToolStripMenuItem.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DevelopmentToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.DevelopmentToolStripMenuItem.Image = global::Diploma_Project.Properties.Resources.Development_Icon;
+            this.DevelopmentToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DevelopmentToolStripMenuItem.Image")));
             this.DevelopmentToolStripMenuItem.Name = "DevelopmentToolStripMenuItem";
-            this.DevelopmentToolStripMenuItem.Size = new System.Drawing.Size(121, 29);
+            this.DevelopmentToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.DevelopmentToolStripMenuItem.Text = "Разработка";
             // 
             // LearningMaterialsToolStripMenuItem
@@ -204,7 +205,7 @@
             // 
             this.UnityToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.UnityToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.UnityToolStripMenuItem.Image = global::Diploma_Project.Properties.Resources.Unity_Icon;
+            this.UnityToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("UnityToolStripMenuItem.Image")));
             this.UnityToolStripMenuItem.Name = "UnityToolStripMenuItem";
             this.UnityToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.UnityToolStripMenuItem.Text = "Unity";
@@ -214,7 +215,7 @@
             // 
             this.UnrealEngineToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.UnrealEngineToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.UnrealEngineToolStripMenuItem.Image = global::Diploma_Project.Properties.Resources.Unreal_Engine_White;
+            this.UnrealEngineToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("UnrealEngineToolStripMenuItem.Image")));
             this.UnrealEngineToolStripMenuItem.Name = "UnrealEngineToolStripMenuItem";
             this.UnrealEngineToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.UnrealEngineToolStripMenuItem.Text = "Unreal Engine";
@@ -224,7 +225,7 @@
             // 
             this.GodotToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.GodotToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.GodotToolStripMenuItem.Image = global::Diploma_Project.Properties.Resources.Godot_icon;
+            this.GodotToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("GodotToolStripMenuItem.Image")));
             this.GodotToolStripMenuItem.Name = "GodotToolStripMenuItem";
             this.GodotToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.GodotToolStripMenuItem.Text = "Godot";
@@ -240,7 +241,7 @@
             this.DiscountsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.DiscountsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DiscountsToolStripMenuItem.Image")));
             this.DiscountsToolStripMenuItem.Name = "DiscountsToolStripMenuItem";
-            this.DiscountsToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
+            this.DiscountsToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.DiscountsToolStripMenuItem.Text = "Промоции";
             // 
             // CouponsToolStripMenuItem
@@ -269,7 +270,7 @@
             this.ContactsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.ContactsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ContactsToolStripMenuItem.Image")));
             this.ContactsToolStripMenuItem.Name = "ContactsToolStripMenuItem";
-            this.ContactsToolStripMenuItem.Size = new System.Drawing.Size(107, 29);
+            this.ContactsToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.ContactsToolStripMenuItem.Text = "Контакти";
             // 
             // toolStripMenuItem1
@@ -296,7 +297,7 @@
             this.AboutUsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.AboutUsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("AboutUsToolStripMenuItem.Image")));
             this.AboutUsToolStripMenuItem.Name = "AboutUsToolStripMenuItem";
-            this.AboutUsToolStripMenuItem.Size = new System.Drawing.Size(87, 29);
+            this.AboutUsToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.AboutUsToolStripMenuItem.Text = "За нас";
             this.AboutUsToolStripMenuItem.Click += new System.EventHandler(this.AboutUsToolStripMenuItem_Click);
             // 
@@ -316,16 +317,16 @@
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
             this.Menu.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
-            this.Menu.Size = new System.Drawing.Size(912, 30);
+            this.Menu.Size = new System.Drawing.Size(912, 25);
             this.Menu.TabIndex = 0;
             this.Menu.Text = "menuStrip1";
             // 
             // ServicesToolStripMenuItem
             // 
             this.ServicesToolStripMenuItem.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ServicesToolStripMenuItem.Image = global::Diploma_Project.Properties.Resources.Services;
+            this.ServicesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ServicesToolStripMenuItem.Image")));
             this.ServicesToolStripMenuItem.Name = "ServicesToolStripMenuItem";
-            this.ServicesToolStripMenuItem.Size = new System.Drawing.Size(90, 29);
+            this.ServicesToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.ServicesToolStripMenuItem.Text = "Услуги";
             this.ServicesToolStripMenuItem.Click += new System.EventHandler(this.ServicesToolStripMenuItem_Click);
             // 
@@ -386,7 +387,7 @@
             // services
             // 
             this.services.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.services.Location = new System.Drawing.Point(-6, 39);
+            this.services.Location = new System.Drawing.Point(-6, 29);
             this.services.Name = "services";
             this.services.Size = new System.Drawing.Size(930, 426);
             this.services.TabIndex = 28;
@@ -397,7 +398,7 @@
             // weeklyDiscounts
             // 
             this.weeklyDiscounts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.weeklyDiscounts.Location = new System.Drawing.Point(0, 34);
+            this.weeklyDiscounts.Location = new System.Drawing.Point(0, 29);
             this.weeklyDiscounts.Name = "weeklyDiscounts";
             this.weeklyDiscounts.Size = new System.Drawing.Size(930, 426);
             this.weeklyDiscounts.TabIndex = 27;
@@ -407,7 +408,7 @@
             // learnUnrealEngine
             // 
             this.learnUnrealEngine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.learnUnrealEngine.Location = new System.Drawing.Point(0, 34);
+            this.learnUnrealEngine.Location = new System.Drawing.Point(0, 29);
             this.learnUnrealEngine.Name = "learnUnrealEngine";
             this.learnUnrealEngine.Size = new System.Drawing.Size(930, 426);
             this.learnUnrealEngine.TabIndex = 26;
@@ -416,7 +417,7 @@
             // learnGodot
             // 
             this.learnGodot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.learnGodot.Location = new System.Drawing.Point(0, 34);
+            this.learnGodot.Location = new System.Drawing.Point(0, 29);
             this.learnGodot.Name = "learnGodot";
             this.learnGodot.Size = new System.Drawing.Size(930, 426);
             this.learnGodot.TabIndex = 25;
@@ -426,7 +427,7 @@
             // learnUnity
             // 
             this.learnUnity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.learnUnity.Location = new System.Drawing.Point(0, 34);
+            this.learnUnity.Location = new System.Drawing.Point(0, 29);
             this.learnUnity.Name = "learnUnity";
             this.learnUnity.Size = new System.Drawing.Size(930, 426);
             this.learnUnity.TabIndex = 24;
@@ -436,7 +437,7 @@
             // contacts
             // 
             this.contacts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.contacts.Location = new System.Drawing.Point(0, 34);
+            this.contacts.Location = new System.Drawing.Point(0, 29);
             this.contacts.Name = "contacts";
             this.contacts.Size = new System.Drawing.Size(930, 426);
             this.contacts.TabIndex = 23;
@@ -446,7 +447,7 @@
             // myGames
             // 
             this.myGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.myGames.Location = new System.Drawing.Point(0, 34);
+            this.myGames.Location = new System.Drawing.Point(0, 29);
             this.myGames.Name = "myGames";
             this.myGames.Size = new System.Drawing.Size(930, 426);
             this.myGames.TabIndex = 22;
@@ -455,7 +456,7 @@
             // register
             // 
             this.register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.register.Location = new System.Drawing.Point(0, 34);
+            this.register.Location = new System.Drawing.Point(0, 29);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(930, 426);
             this.register.TabIndex = 19;
@@ -464,7 +465,7 @@
             // signIn
             // 
             this.signIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.signIn.Location = new System.Drawing.Point(0, 34);
+            this.signIn.Location = new System.Drawing.Point(0, 29);
             this.signIn.Name = "signIn";
             this.signIn.Size = new System.Drawing.Size(930, 426);
             this.signIn.TabIndex = 21;
@@ -473,7 +474,7 @@
             // sendAReport
             // 
             this.sendAReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.sendAReport.Location = new System.Drawing.Point(0, 34);
+            this.sendAReport.Location = new System.Drawing.Point(0, 29);
             this.sendAReport.Name = "sendAReport";
             this.sendAReport.Size = new System.Drawing.Size(930, 426);
             this.sendAReport.TabIndex = 20;
@@ -482,7 +483,7 @@
             // market
             // 
             this.market.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.market.Location = new System.Drawing.Point(0, 34);
+            this.market.Location = new System.Drawing.Point(0, 29);
             this.market.Name = "market";
             this.market.Size = new System.Drawing.Size(930, 426);
             this.market.TabIndex = 18;
@@ -491,7 +492,7 @@
             // learningMaterials
             // 
             this.learningMaterials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.learningMaterials.Location = new System.Drawing.Point(0, 34);
+            this.learningMaterials.Location = new System.Drawing.Point(0, 29);
             this.learningMaterials.Name = "learningMaterials";
             this.learningMaterials.Size = new System.Drawing.Size(930, 426);
             this.learningMaterials.TabIndex = 17;
@@ -500,7 +501,7 @@
             // aboutUs
             // 
             this.aboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.aboutUs.Location = new System.Drawing.Point(0, 34);
+            this.aboutUs.Location = new System.Drawing.Point(0, 29);
             this.aboutUs.Name = "aboutUs";
             this.aboutUs.Size = new System.Drawing.Size(930, 426);
             this.aboutUs.TabIndex = 16;
@@ -511,9 +512,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.BackgroundImage = global::Diploma_Project.Properties.Resources.Game_Hub_Logo;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(912, 453);
+            this.Controls.Add(signIn);
             this.Controls.Add(this.services);
             this.Controls.Add(this.weeklyDiscounts);
             this.Controls.Add(this.learnUnrealEngine);
@@ -522,7 +524,6 @@
             this.Controls.Add(this.contacts);
             this.Controls.Add(this.myGames);
             this.Controls.Add(this.register);
-            this.Controls.Add(this.signIn);
             this.Controls.Add(this.sendAReport);
             this.Controls.Add(this.market);
             this.Controls.Add(this.learningMaterials);
@@ -548,7 +549,6 @@
             this.groupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -558,7 +558,7 @@
         private System.Windows.Forms.ToolStripMenuItem SignInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RegistrationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MyGamesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem BalanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CheckOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MarketToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GamesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AccessoriesToolStripMenuItem;

@@ -50,6 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ButtonUtils.cs" />
+    <Compile Include="Presenters\AdminEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presenters\AdminEntry.Designer.cs">
+      <DependentUpon>AdminEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presenters\Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,6 +73,18 @@
     </Compile>
     <Compile Include="Views\AboutUs.Designer.cs">
       <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminMarket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminMarket.Designer.cs">
+      <DependentUpon>AdminMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminQueue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminQueue.Designer.cs">
+      <DependentUpon>AdminQueue.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Contacts.cs">
       <SubType>UserControl</SubType>
@@ -148,6 +172,12 @@
     <Compile Include="Views\WeeklyDiscounts.Designer.cs">
       <DependentUpon>WeeklyDiscounts.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presenters\AdminEntry.resx">
+      <DependentUpon>AdminEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenters\Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -155,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminMarket.resx">
+      <DependentUpon>AdminMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminQueue.resx">
+      <DependentUpon>AdminQueue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Contacts.resx">
       <DependentUpon>Contacts.cs</DependentUpon>
@@ -220,7 +256,6 @@
   <ItemGroup>
     <None Include="Resources\Unity Icon With text.png" />
     <None Include="Resources\Godot Icon with text.png" />
-    <None Include="Unity.pdf" />
     <None Include="Resources\Unreal Engine White.png" />
     <None Include="Resources\Unreal Engine With Text.png" />
     <None Include="Resources\Unreal Icon.png" />
@@ -344,6 +379,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Services Banner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services Banner2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services Banner3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purchases Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

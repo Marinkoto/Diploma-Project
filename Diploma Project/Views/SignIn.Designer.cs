@@ -34,7 +34,7 @@
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSignIn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReviewPassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,29 +92,30 @@
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Парола";
             // 
-            // button1
+            // btnSignIn
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.LightCyan;
-            this.button1.Location = new System.Drawing.Point(524, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 30);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Впиши се";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSignIn.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSignIn.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSignIn.ForeColor = System.Drawing.Color.LightCyan;
+            this.btnSignIn.Location = new System.Drawing.Point(524, 277);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(109, 30);
+            this.btnSignIn.TabIndex = 13;
+            this.btnSignIn.Text = "Впиши се";
+            this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(218, 426);
+            this.pictureBox1.Size = new System.Drawing.Size(218, 427);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -139,7 +140,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnReviewPassword);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.txtBoxPassword);
@@ -161,7 +162,7 @@
         private System.Windows.Forms.TextBox txtBoxPassword;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Button btnReviewPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
