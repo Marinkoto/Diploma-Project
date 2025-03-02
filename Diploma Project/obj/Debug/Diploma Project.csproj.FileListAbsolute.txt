@@ -3,27 +3,30 @@ Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diplo
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.pdb
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.csproj.AssemblyReference.cache
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.csproj.SuggestedBindingRedirects.cache
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Presenters.AdminEntry.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Presenters.Checkout.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Properties.Resources.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AboutUs.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminMarket.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminQueue.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminRegistry.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Contacts.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnGodot.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearningMaterials.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnUnity.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnUnrealEngine.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Product.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Market.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.MyGames.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Register.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.SendAReport.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Services.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.SignIn.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.StartPage.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.WeeklyDiscounts.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.csproj.GenerateResource.cache
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.csproj.CoreCompileInputs.cache
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.exe
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.pdb
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Contacts.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnUnity.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnGodot.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnUnrealEngine.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.WeeklyDiscounts.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Services.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Presenters.AdminEntry.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminMarket.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Presenters.Checkout.resources
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminQueue.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Database.accdb
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\App.config

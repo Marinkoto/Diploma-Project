@@ -3,6 +3,7 @@ using Diploma_Project.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -17,19 +18,12 @@ namespace Diploma_Project
         public StartPage()
         {
             InitializeComponent();
-            market.LoadMarketItems();
-            weeklyDiscounts.LoadMarketItems();
-            signIn.SignInCompleted += (s, e) =>
-            {
-                SignIn();
-            };
-            CloseAllControls();
         }
 
         private void SignInToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CloseAllControls();
-            signIn.Show();
+            signIn1.Show();
         }
         private void HomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -53,6 +47,8 @@ namespace Diploma_Project
             SignInToolStripMenuItem.Visible = false;
             RegistrationToolStripMenuItem.Visible = false;
             CloseAllControls();
+            Title.Text = "Добре Дошли!";
+            Title.Location = new Point(325, 40);
             MessageBox.Show("Влизането бе успешно!","Успех!",MessageBoxButtons.OK,
                 MessageBoxIcon.Information,MessageBoxDefaultButton.Button1);
         }
@@ -65,9 +61,19 @@ namespace Diploma_Project
 
         private void StartPage_Load(object sender, EventArgs e)
         {
-
+            signIn1.SignInCompleted += (s,ea) =>
+            {
+                SignIn();
+            };
+            CloseAllControls();
         }
-
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            
+            market.LoadMarketItems("Game");
+            weeklyDiscounts.LoadMarketItems("Discount");
+        }
         private void AboutUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CloseAllControls();

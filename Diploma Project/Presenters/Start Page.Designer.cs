@@ -66,11 +66,11 @@
             this.contacts = new Diploma_Project.Views.Contacts();
             this.myGames = new Diploma_Project.Views.MyGames();
             this.register = new Diploma_Project.Views.Register();
-            this.signIn = new Diploma_Project.Views.SignIn();
             this.sendAReport = new Diploma_Project.Views.SendAReport();
             this.market = new Diploma_Project.Views.Market();
             this.learningMaterials = new Diploma_Project.Views.LearningMaterials();
             this.aboutUs = new Diploma_Project.Views.AboutUs();
+            this.signIn1 = new Diploma_Project.Views.SignIn();
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
             this.groupBox.SuspendLayout();
@@ -105,7 +105,7 @@
             this.SignInToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.SignInToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SignInToolStripMenuItem.Name = "SignInToolStripMenuItem";
-            this.SignInToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.SignInToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.SignInToolStripMenuItem.Text = "Вход";
             this.SignInToolStripMenuItem.Click += new System.EventHandler(this.SignInToolStripMenuItem_Click);
             // 
@@ -114,7 +114,7 @@
             this.RegistrationToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.RegistrationToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.RegistrationToolStripMenuItem.Name = "RegistrationToolStripMenuItem";
-            this.RegistrationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.RegistrationToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.RegistrationToolStripMenuItem.Text = "Регистрация";
             this.RegistrationToolStripMenuItem.Click += new System.EventHandler(this.RegistrationToolStripMenuItem_Click);
             // 
@@ -123,7 +123,7 @@
             this.MyGamesToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.MyGamesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.MyGamesToolStripMenuItem.Name = "MyGamesToolStripMenuItem";
-            this.MyGamesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.MyGamesToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.MyGamesToolStripMenuItem.Text = "Моите Игри";
             this.MyGamesToolStripMenuItem.Visible = false;
             this.MyGamesToolStripMenuItem.Click += new System.EventHandler(this.MyGamesToolStripMenuItem_Click);
@@ -133,7 +133,7 @@
             this.CheckOutToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.CheckOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CheckOutToolStripMenuItem.Name = "CheckOutToolStripMenuItem";
-            this.CheckOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.CheckOutToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.CheckOutToolStripMenuItem.Text = "Количка";
             this.CheckOutToolStripMenuItem.Visible = false;
             this.CheckOutToolStripMenuItem.Click += new System.EventHandler(this.CheckOutToolStripMenuItem_Click);
@@ -156,7 +156,7 @@
             this.GamesToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.GamesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GamesToolStripMenuItem.Name = "GamesToolStripMenuItem";
-            this.GamesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.GamesToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.GamesToolStripMenuItem.Text = "Игри";
             this.GamesToolStripMenuItem.Click += new System.EventHandler(this.GamesToolStripMenuItem_Click);
             // 
@@ -165,7 +165,7 @@
             this.AccessoriesToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.AccessoriesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AccessoriesToolStripMenuItem.Name = "AccessoriesToolStripMenuItem";
-            this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.AccessoriesToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.AccessoriesToolStripMenuItem.Text = "Аксесоари";
             // 
             // DevelopmentToolStripMenuItem
@@ -378,11 +378,11 @@
             this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(400, 47);
+            this.Title.Location = new System.Drawing.Point(375, 47);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(524, 98);
             this.Title.TabIndex = 14;
-            this.Title.Text = "Добре Дошли!";
+            this.Title.Text = "Влезте в своя профил!";
             // 
             // services
             // 
@@ -462,15 +462,6 @@
             this.register.TabIndex = 19;
             this.register.Tag = "CustomControl";
             // 
-            // signIn
-            // 
-            this.signIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.signIn.Location = new System.Drawing.Point(0, 29);
-            this.signIn.Name = "signIn";
-            this.signIn.Size = new System.Drawing.Size(930, 426);
-            this.signIn.TabIndex = 21;
-            this.signIn.Tag = "CustomControl";
-            // 
             // sendAReport
             // 
             this.sendAReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
@@ -507,6 +498,19 @@
             this.aboutUs.TabIndex = 16;
             this.aboutUs.Tag = "CustomControl";
             // 
+            // signIn1
+            // 
+            this.signIn1.AdminEntry = null;
+            this.signIn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.signIn1.Location = new System.Drawing.Point(0, 29);
+            this.signIn1.Name = "signIn1";
+            this.signIn1.NameOfUser = null;
+            this.signIn1.Password = null;
+            this.signIn1.Role = null;
+            this.signIn1.Size = new System.Drawing.Size(930, 426);
+            this.signIn1.TabIndex = 29;
+            this.signIn1.Tag = "CustomControl";
+            // 
             // StartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -514,8 +518,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(912, 453);
-            this.Controls.Add(signIn);
+            this.ClientSize = new System.Drawing.Size(912, 448);
+            this.Controls.Add(this.signIn1);
             this.Controls.Add(this.services);
             this.Controls.Add(this.weeklyDiscounts);
             this.Controls.Add(this.learnUnrealEngine);
@@ -536,8 +540,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(930, 500);
-            this.MinimumSize = new System.Drawing.Size(930, 500);
+            this.MaximumSize = new System.Drawing.Size(930, 495);
+            this.MinimumSize = new System.Drawing.Size(930, 495);
             this.Name = "StartPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Hub";
@@ -549,10 +553,10 @@
             this.groupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
-
         private System.Windows.Forms.ToolStripMenuItem HomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SignInToolStripMenuItem;
@@ -573,7 +577,7 @@
         private System.Windows.Forms.ToolStripMenuItem WeeklyDiscountsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ContactsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutUsToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip Menu;
+        private new System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.PictureBox pBox1;
         private System.Windows.Forms.ToolStripMenuItem ReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
@@ -587,7 +591,6 @@
         private Views.Market market;
         private Views.Register register;
         private Views.SendAReport sendAReport;
-        private Views.SignIn signIn;
         private Views.MyGames myGames;
         private Views.Contacts contacts;
         private Views.LearnUnity learnUnity;
@@ -595,6 +598,7 @@
         private Views.LearnUnrealEngine learnUnrealEngine;
         private Views.WeeklyDiscounts weeklyDiscounts;
         private Views.Services services;
+        private Views.SignIn signIn1;
     }
 }
 

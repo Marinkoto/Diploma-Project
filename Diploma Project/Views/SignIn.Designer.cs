@@ -107,13 +107,13 @@
             this.btnSignIn.Text = "Впиши се";
             this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSignIn.UseVisualStyleBackColor = false;
-            this.btnSignIn.Click += new System.EventHandler(this.button1_Click);
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 427);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -149,6 +149,7 @@
             this.Name = "SignIn";
             this.Size = new System.Drawing.Size(930, 426);
             this.Tag = "CustomControl";
+            this.Load += new System.EventHandler(this.SignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +16,7 @@ namespace Diploma_Project.Views
     {
         public FlowLayoutPanel Panel => itemHolder;
         public MenuStrip Filters => filterMenuStrip;
+        public DatabaseHelper db;
         public Market()
         {
             InitializeComponent();
@@ -32,26 +35,26 @@ namespace Diploma_Project.Views
         {
             Panel.Controls.Clear();
         }
-        public virtual void LoadMarketItems()
+        public virtual void LoadMarketItems(string itemType)
         {
-            for (int i = 1; i <= 20; i++)
+            db = new DatabaseHelper();
+            string query = "SELECT * FROM Products WHERE ProductType = ?";
+            OleDbParameter param = new OleDbParameter("ProductType", OleDbType.VarChar)
+            { 
+                Value =  itemType
+            };
+            DataTable dt = db.ExecuteQuery(query, param);
+
+
+            foreach (DataRow dr in dt.Rows)
             {
-                var item = new Product
+                Product product = new Product
                 {
-                    Title = $"Game {i}",
-                    Description = "A great game to play.",
-                    Price = $"${i * 10}",
-                    ItemImage = Properties.Resources.About_us_Photo
+                    Title = dr["ProductName"].ToString(),
+                    Price = $"{dr["Price"]}€",
+                    Description = dr["Description"].ToString()
                 };
-
-
-                item.BuyClicked += (s, e) =>
-                {
-                    var clickedItem = s as Product;
-                    MessageBox.Show($"You bought {clickedItem.Title} for {clickedItem.Price}!");
-                };
-
-                AddItem(item);
+                AddItem(product);
             }
         }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

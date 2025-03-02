@@ -22,27 +22,9 @@ namespace Diploma_Project.Views
             Panel.AutoScroll = true;
             Filters.Visible = false;
         }
-        public override void LoadMarketItems()
+        public override void LoadMarketItems(string itemType)
         {
-            for (int i = 1; i <= 5; i++)
-            {
-                var item = new Product
-                {
-                    Title = $"Discount {i}",
-                    Description = "Very Special",
-                    Price = $"${i * 10}",
-                    ItemImage = Properties.Resources.About_us_Photo
-                };
-
-
-                item.BuyClicked += (s, e) =>
-                {
-                    var clickedItem = s as Product;
-                    MessageBox.Show($"You bought {clickedItem.Title} for {clickedItem.Price}!");
-                };
-
-                AddItem(item);
-            }
+            base.LoadMarketItems(itemType);
         }
         private void WeeklyDiscounts_Load(object sender, EventArgs e)
         {

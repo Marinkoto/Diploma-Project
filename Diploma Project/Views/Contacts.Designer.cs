@@ -166,7 +166,7 @@
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.Image = global::Diploma_Project.Properties.Resources.Contacts_Image_2;
-            this.pictureBox5.Location = new System.Drawing.Point(608, 255);
+            this.pictureBox5.Location = new System.Drawing.Point(606, 255);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(273, 167);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,7 +188,7 @@
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Image = global::Diploma_Project.Properties.Resources.Location_Image;
-            this.pictureBox3.Location = new System.Drawing.Point(50, 256);
+            this.pictureBox3.Location = new System.Drawing.Point(48, 256);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(273, 167);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

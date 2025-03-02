@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace Diploma_Project.Views
     {
         public AdminEntry AdminEntry { get; set; }
         public event EventHandler SignInCompleted;
+        private DatabaseHelper db;
+
+        public string NameOfUser { get; set; }
+        public string Password{ get; set; }
+        public string Role { get; set; }
         public SignIn()
         {
             InitializeComponent();
@@ -24,18 +30,42 @@ namespace Diploma_Project.Views
         {
             ButtonUtils.ReviewPasswordButton(txtBoxPassword);
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSignIn_Click(object sender, EventArgs e)
         {
-            if(txtBoxPassword.Text == "123" && txtBoxUserName.Text == "Admin")
+            string query = "SELECT NameOfUser,Password,Role FROM Users WHERE NameOfUser = ? AND Password = ?";
+
+            OleDbParameter[] parameters =
             {
-                AdminEntry = new AdminEntry();
-                AdminEntry.Show();
-            }
-            if(txtBoxPassword.Text == "123" && txtBoxUserName.Text == "Marin")
+                new OleDbParameter("NameOfUser",txtBoxUserName.Text),
+                new OleDbParameter("Password",txtBoxPassword.Text)
+            };
+
+            DataTable dt = db.ExecuteQuery(query, parameters);
+            if (dt.Rows.Count > 0)
             {
-                SignInCompleted?.Invoke(sender,e);
+                Role = dt.Rows[0]["Role"].ToString();
+                if (Role == "Admin")
+                {
+                    AdminEntry adminEntry = new AdminEntry();
+                    adminEntry.Show();
+                }
+                if (Role == "User")
+                {
+                    SignInCompleted?.Invoke(this, new EventArgs());
+                }
             }
+        }
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            if (!DesignMode)
+            {
+                db = new DatabaseHelper();
+            }
+        }
+        private void SignIn_Load(object sender, EventArgs e)
+        {
         }
     }
 }

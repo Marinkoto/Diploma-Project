@@ -2,6 +2,14 @@
 {
     partial class AdminEntry
     {
+        private new System.Windows.Forms.MenuStrip Menu;
+        private System.Windows.Forms.ToolStripMenuItem пазарToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem услугиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поръчкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem потребителиToolStripMenuItem;
+        private Views.AdminMarket adminMarket;
+        private Views.AdminQueue adminQueue;
+        private Views.AdminRegistry adminRegistry;
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -34,7 +42,9 @@
             this.услугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поръчкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.потребителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminMarket1 = new Diploma_Project.Views.AdminMarket();
+            this.adminQueue = new Diploma_Project.Views.AdminQueue();
+            this.adminMarket = new Diploma_Project.Views.AdminMarket();
+            this.adminRegistry = new Diploma_Project.Views.AdminRegistry();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +60,7 @@
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
             this.Menu.Padding = new System.Windows.Forms.Padding(150, 0, 0, 0);
-            this.Menu.Size = new System.Drawing.Size(762, 24);
+            this.Menu.Size = new System.Drawing.Size(735, 24);
             this.Menu.TabIndex = 0;
             this.Menu.Text = "Menu";
             // 
@@ -70,6 +80,7 @@
             this.услугиToolStripMenuItem.Name = "услугиToolStripMenuItem";
             this.услугиToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.услугиToolStripMenuItem.Text = "Заявки";
+            this.услугиToolStripMenuItem.Click += new System.EventHandler(this.услугиToolStripMenuItem_Click);
             // 
             // поръчкиToolStripMenuItem
             // 
@@ -85,27 +96,48 @@
             this.потребителиToolStripMenuItem.Name = "потребителиToolStripMenuItem";
             this.потребителиToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.потребителиToolStripMenuItem.Text = "Потребители";
+            this.потребителиToolStripMenuItem.Click += new System.EventHandler(this.потребителиToolStripMenuItem_Click);
             // 
-            // adminMarket1
+            // adminQueue
             // 
-            this.adminMarket1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.adminMarket1.Location = new System.Drawing.Point(194, 38);
-            this.adminMarket1.Name = "adminMarket1";
-            this.adminMarket1.Size = new System.Drawing.Size(388, 426);
-            this.adminMarket1.TabIndex = 1;
+            this.adminQueue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.adminQueue.Location = new System.Drawing.Point(37, 32);
+            this.adminQueue.Name = "adminQueue";
+            this.adminQueue.Size = new System.Drawing.Size(686, 483);
+            this.adminQueue.TabIndex = 2;
+            this.adminQueue.Visible = false;
+            // 
+            // adminMarket
+            // 
+            this.adminMarket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.adminMarket.Location = new System.Drawing.Point(188, 32);
+            this.adminMarket.Name = "adminMarket";
+            this.adminMarket.Size = new System.Drawing.Size(388, 426);
+            this.adminMarket.TabIndex = 1;
+            this.adminMarket.Visible = false;
+            // 
+            // adminRegistry
+            // 
+            this.adminRegistry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.adminRegistry.Location = new System.Drawing.Point(25, 32);
+            this.adminRegistry.Name = "adminRegistry";
+            this.adminRegistry.Size = new System.Drawing.Size(686, 483);
+            this.adminRegistry.TabIndex = 3;
             // 
             // AdminEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(762, 453);
-            this.ControlBox = false;
-            this.Controls.Add(this.adminMarket1);
+            this.ClientSize = new System.Drawing.Size(735, 543);
+            this.Controls.Add(this.adminQueue);
+            this.Controls.Add(this.adminMarket);
+            this.Controls.Add(this.adminRegistry);
             this.Controls.Add(this.Menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu;
-            this.MaximumSize = new System.Drawing.Size(1000, 500);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1000, 700);
             this.MinimumSize = new System.Drawing.Size(460, 500);
             this.Name = "AdminEntry";
             this.Text = "AdminEntry";
@@ -117,14 +149,6 @@
             this.PerformLayout();
 
         }
-
         #endregion
-
-        private System.Windows.Forms.MenuStrip Menu;
-        private System.Windows.Forms.ToolStripMenuItem пазарToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem услугиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поръчкиToolStripMenuItem;
-        private Views.AdminMarket adminMarket1;
-        private System.Windows.Forms.ToolStripMenuItem потребителиToolStripMenuItem;
     }
 }

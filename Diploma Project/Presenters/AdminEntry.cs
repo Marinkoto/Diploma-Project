@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,7 +30,22 @@ namespace Diploma_Project.Presenters
 
         private void пазарToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            adminMarket1.Show();
+            adminMarket.Show();
+            adminQueue.Hide();
+        }
+
+        private void услугиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            adminQueue.Show();
+            adminMarket.Hide();
+            adminRegistry.Hide();
+        }
+
+        private void потребителиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            adminQueue.Hide();
+            adminMarket.Hide();
+            adminRegistry.Show();
         }
     }
 }
