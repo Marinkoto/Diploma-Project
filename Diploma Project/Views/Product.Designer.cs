@@ -78,6 +78,7 @@
             // pBoxIcon
             // 
             this.pBoxIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBoxIcon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pBoxIcon.Image = global::Diploma_Project.Properties.Resources.Background_Main_Page;
             this.pBoxIcon.Location = new System.Drawing.Point(32, 33);
             this.pBoxIcon.Name = "pBoxIcon";
@@ -91,11 +92,12 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPrice.Location = new System.Drawing.Point(2, 295);
+            this.lblPrice.Location = new System.Drawing.Point(6, 295);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(59, 23);
             this.lblPrice.TabIndex = 20;
             this.lblPrice.Text = "label1";
+            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Product
             // 

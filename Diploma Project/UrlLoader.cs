@@ -9,19 +9,19 @@ namespace Diploma_Project
 {
     public static class UrlLoader
     {
-        public static void LoadVideo(string videoId,WebBrowser webBrowser)
+        public static void LoadVideo(string videoId, WebBrowser webBrowser)
         {
-            string html = @"
-    <html>
+            string html = $@"
+<html>
     <head>
         <meta content='IE=Edge' http-equiv='X-UA-Compatible'/>
     </head>
     <body>
-        <iframe id='video' src='https://www.youtube.com/embed/" + videoId + @"' 
+        <iframe id='video' src='https://www.youtube.com/embed/{videoId}' 
                 width='600' height='300' frameborder='0' allowfullscreen>
         </iframe>
     </body>
-    </html>";
+</html>";
 
             webBrowser.DocumentText = html;
         }

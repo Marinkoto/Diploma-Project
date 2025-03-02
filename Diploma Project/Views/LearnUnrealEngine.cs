@@ -67,5 +67,10 @@ namespace Diploma_Project.Views
             boxItemInterface.Visible = false;
             boxItemUI.Visible = false;
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }
