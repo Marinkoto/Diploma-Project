@@ -544,7 +544,7 @@
             this.MinimumSize = new System.Drawing.Size(930, 495);
             this.Name = "StartPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Game Hub";
+            this.Text = "GameHub";
             this.Load += new System.EventHandler(this.StartPage_Load);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
