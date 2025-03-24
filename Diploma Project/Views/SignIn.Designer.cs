@@ -37,6 +37,7 @@
             this.btnSignIn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReviewPassword = new System.Windows.Forms.Button();
+            this.usersTableAdapter = new Diploma_Project.DatabaseDataSetTableAdapters.UsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,11 +76,12 @@
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblUserName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUserName.Location = new System.Drawing.Point(432, 144);
+            this.lblUserName.Location = new System.Drawing.Point(375, 145);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(39, 20);
+            this.lblUserName.Size = new System.Drawing.Size(96, 20);
             this.lblUserName.TabIndex = 3;
-            this.lblUserName.Text = "Име";
+            this.lblUserName.Text = "Потребител";
+            this.lblUserName.Click += new System.EventHandler(this.lblUserName_Click);
             // 
             // lblPassword
             // 
@@ -133,6 +135,10 @@
             this.btnReviewPassword.UseVisualStyleBackColor = true;
             this.btnReviewPassword.Click += new System.EventHandler(this.btnReviewPassword_Click);
             // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,5 +172,6 @@
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Button btnReviewPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DatabaseDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
     }
 }

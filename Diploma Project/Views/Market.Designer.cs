@@ -39,6 +39,8 @@
             this.platformertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.multiplayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBox = new System.Windows.Forms.CheckBox();
+            this.productsTableAdapter = new Diploma_Project.DatabaseDataSetTableAdapters.ProductsTableAdapter();
+            this.purchasesTableAdapter = new Diploma_Project.DatabaseDataSetTableAdapters.PurchasesTableAdapter();
             this.filterMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,7 +106,7 @@
             this.roguelikeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.roguelikeToolStripMenuItem.Name = "roguelikeToolStripMenuItem";
             this.roguelikeToolStripMenuItem.Size = new System.Drawing.Size(149, 27);
-            this.roguelikeToolStripMenuItem.Text = "Роуглайк ";
+            this.roguelikeToolStripMenuItem.Text = "Роуглайк";
             this.roguelikeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.roguelikeToolStripMenuItem.Click += new System.EventHandler(this.roguelikeToolStripMenuItem_Click);
             // 
@@ -115,7 +117,7 @@
             this.adventuretoolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.adventuretoolStripMenuItem.Name = "adventuretoolStripMenuItem";
             this.adventuretoolStripMenuItem.Size = new System.Drawing.Size(149, 27);
-            this.adventuretoolStripMenuItem.Text = "Приключение  ";
+            this.adventuretoolStripMenuItem.Text = "Приключение";
             this.adventuretoolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.adventuretoolStripMenuItem.Click += new System.EventHandler(this.adventuretoolStripMenuItem_Click);
             // 
@@ -177,6 +179,14 @@
             this.checkBox.UseVisualStyleBackColor = false;
             this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
+            // purchasesTableAdapter
+            // 
+            this.purchasesTableAdapter.ClearBeforeFill = true;
+            // 
             // Market
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,5 +219,7 @@
         private System.Windows.Forms.ToolStripMenuItem simulationtoolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem platformertoolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox;
+        private DatabaseDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+        private DatabaseDataSetTableAdapters.PurchasesTableAdapter purchasesTableAdapter;
     }
 }

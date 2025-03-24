@@ -49,6 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -69,13 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ButtonUtils.cs" />
-    <Compile Include="Models\DatabaseDataSet.Designer.cs" />
-    <Compile Include="Models\DatabaseDataSet1.Designer.cs">
+    <Compile Include="DatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Models\DatabaseHelper.cs" />
     <Compile Include="Presenters\AdminEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,15 +268,15 @@
     <EmbeddedResource Include="Views\WeeklyDiscounts.resx">
       <DependentUpon>WeeklyDiscounts.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Models\DatabaseDataSet.xsc">
+    <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Models\DatabaseDataSet.xsd">
+    <None Include="DatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Models\DatabaseDataSet.xss">
+    <None Include="DatabaseDataSet.xss">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -454,9 +453,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\Database.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Models\Database.accdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

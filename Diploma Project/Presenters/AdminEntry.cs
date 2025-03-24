@@ -47,5 +47,10 @@ namespace Diploma_Project.Presenters
             adminMarket.Hide();
             adminRegistry.Show();
         }
+
+        private void adminQueue_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

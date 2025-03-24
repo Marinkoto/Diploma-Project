@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +20,9 @@ namespace Diploma_Project
         public StartPage()
         {
             InitializeComponent();
+            CloseAllControls();
+            market.LoadMarketItems("Game");
+            weeklyDiscounts.LoadMarketItems("Discount");
         }
 
         private void SignInToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,12 +45,13 @@ namespace Diploma_Project
             }
         }
 
-        private void SignIn()
+        private void CompleteSignIn()
         {
             CheckOutToolStripMenuItem.Visible = true;
             MyGamesToolStripMenuItem.Visible = true;
             SignInToolStripMenuItem.Visible = false;
             RegistrationToolStripMenuItem.Visible = false;
+            SignIn.SignedIn = true;
             CloseAllControls();
             Title.Text = "Добре Дошли!";
             Title.Location = new Point(325, 40);
@@ -61,18 +67,11 @@ namespace Diploma_Project
 
         private void StartPage_Load(object sender, EventArgs e)
         {
-            signIn1.SignInCompleted += (s,ea) =>
+            SignIn.SignInCompleted += (s,ea) =>
             {
-                SignIn();
+                CompleteSignIn();
             };
-            CloseAllControls();
-        }
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            
-            market.LoadMarketItems("Game");
-            weeklyDiscounts.LoadMarketItems("Discount");
+
         }
         private void AboutUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -95,6 +94,7 @@ namespace Diploma_Project
         {
             CloseAllControls();
             myGames.Show();
+            
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

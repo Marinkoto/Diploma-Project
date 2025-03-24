@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReviewPassword = new System.Windows.Forms.Button();
             this.btnReviewRepeatPassword = new System.Windows.Forms.Button();
+            this.usersTableAdapter = new Diploma_Project.DatabaseDataSetTableAdapters.UsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,11 +59,11 @@
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblUserName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUserName.Location = new System.Drawing.Point(461, 136);
+            this.lblUserName.Location = new System.Drawing.Point(338, 137);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(39, 20);
+            this.lblUserName.Size = new System.Drawing.Size(155, 20);
             this.lblUserName.TabIndex = 8;
-            this.lblUserName.Text = "Име";
+            this.lblUserName.Text = "Потребителско име";
             // 
             // txtBoxPassword
             // 
@@ -133,6 +134,7 @@
             this.btnRegister.Text = "Регистрация";
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // pictureBox1
             // 
@@ -170,6 +172,10 @@
             this.btnReviewRepeatPassword.TabIndex = 15;
             this.btnReviewRepeatPassword.UseVisualStyleBackColor = true;
             this.btnReviewRepeatPassword.Click += new System.EventHandler(this.btnReviewRepeatPassword_Click);
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // Register
             // 
@@ -210,5 +216,6 @@
         private System.Windows.Forms.Button btnReviewPassword;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DatabaseDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
     }
 }

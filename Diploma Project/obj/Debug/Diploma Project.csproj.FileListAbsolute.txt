@@ -1,4 +1,3 @@
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Models\Database.accdb
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\App.config
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.exe.config
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.exe

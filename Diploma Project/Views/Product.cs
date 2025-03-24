@@ -35,14 +35,17 @@ namespace Diploma_Project.Views
             get => pBoxIcon.Image;
             set => pBoxIcon.Image = value;
         }
-
-        public event EventHandler BuyClicked;
+        public Button PurhcaseButton
+        {
+            get => btnBuy;
+        }
+        public Action BuyClicked;
 
         public Product()
         {
             InitializeComponent();
 
-            btnBuy.Click += (s, e) => BuyClicked?.Invoke(this, EventArgs.Empty);
+            btnBuy.Click += (s, e) => BuyClicked?.Invoke();
         }
 
         private void GameProduct_Load(object sender, EventArgs e)
@@ -50,5 +53,9 @@ namespace Diploma_Project.Views
 
         }
 
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

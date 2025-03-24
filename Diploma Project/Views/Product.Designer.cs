@@ -62,6 +62,7 @@
             this.btnBuy.Text = "Купи\r\n";
             this.btnBuy.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // lblDescription
             // 

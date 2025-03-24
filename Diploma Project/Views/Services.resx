@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJwAAAGnCAYAAABCcj6XAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAPVVJREFUeF7tnfl/FUW6h+evGmZG545eF9xwQ2XJHpKQhCRkBcLiCio4gsIICgoK
+        vQAADr0BR/uQrQAAPVVJREFUeF7tnfl/FUW6h+evGmZG545eF9xwQ2XJHpKQhCRkBcLiCio4gsIICgoK
         CioqCgqoKIg4ruCC+zaLzp3xzjijc3VWnb711EmFSqdO0mudTnh/eD5Jd3X3Oaf721VvVb31vj/44dnL
         AkHwhQhO8IoITvCKCE7wighO8IoITvCKCE7wighO8IoITvCKCE7wighO8IoITvCKCE7wighO8IoITvCK
         CE7wyg82rp0XCIIvfhB8OisQBF+I4ASviOAEr4jgBK+I4ASviOAEr4jgBK+I4ASviOAEr4jgBK+I4ASv
@@ -388,5 +388,8 @@
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="ordersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>184, 17</value>
   </metadata>
 </root>

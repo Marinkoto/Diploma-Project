@@ -1,4 +1,5 @@
-﻿using Diploma_Project.Presenters;
+﻿using Diploma_Project.DatabaseDataSetTableAdapters;
+using Diploma_Project.Presenters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,21 +10,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Diploma_Project.Views
 {
     public partial class SignIn : UserControl
     {
         public AdminEntry AdminEntry { get; set; }
-        public event EventHandler SignInCompleted;
-        private DatabaseHelper db;
+        public static EventHandler SignInCompleted;
 
-        public string NameOfUser { get; set; }
-        public string Password{ get; set; }
-        public string Role { get; set; }
+        public static bool SignedIn { get; set; }
+        public static int UserID { get; private set; }
+        public static string NameOfUser { get; private set; }
         public SignIn()
         {
             InitializeComponent();
+            SignedIn = false;
         }
 
         private void btnReviewPassword_Click(object sender, EventArgs e)
@@ -32,40 +34,36 @@ namespace Diploma_Project.Views
         }
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            string query = "SELECT NameOfUser,Password,Role FROM Users WHERE NameOfUser = ? AND Password = ?";
-
-            OleDbParameter[] parameters =
+            DataTable dt = usersTableAdapter.GetData();
+            var userRow = dt.AsEnumerable()
+                .FirstOrDefault(dr => dr["NameOfUser"].ToString().Equals(txtBoxUserName.Text) &&
+                                      dr["Password"].ToString().Equals(txtBoxPassword.Text));
+            NameOfUser = userRow["NameOfUser"].ToString();
+            UserID = Convert.ToInt32(userRow["ID"]);
+            if (userRow == null)
             {
-                new OleDbParameter("NameOfUser",txtBoxUserName.Text),
-                new OleDbParameter("Password",txtBoxPassword.Text)
-            };
-
-            DataTable dt = db.ExecuteQuery(query, parameters);
-            if (dt.Rows.Count > 0)
-            {
-                Role = dt.Rows[0]["Role"].ToString();
-                if (Role == "Admin")
-                {
-                    AdminEntry adminEntry = new AdminEntry();
-                    adminEntry.Show();
-                }
-                if (Role == "User")
-                {
-                    SignInCompleted?.Invoke(this, new EventArgs());
-                }
+                MessageBox.Show("Грешно въведено име или парола!",
+                    "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
-        }
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-
-            if (!DesignMode)
+            if (userRow["Role"].ToString() == "Admin")
             {
-                db = new DatabaseHelper();
+                AdminEntry = new AdminEntry();
+                AdminEntry.Show();
+            }
+            else
+            {
+                SignInCompleted?.Invoke(this, new EventArgs());
             }
         }
         private void SignIn_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void lblUserName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -60,7 +60,7 @@
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
             this.Menu.Padding = new System.Windows.Forms.Padding(150, 0, 0, 0);
-            this.Menu.Size = new System.Drawing.Size(735, 30);
+            this.Menu.Size = new System.Drawing.Size(735, 24);
             this.Menu.TabIndex = 0;
             this.Menu.Text = "Menu";
             // 
@@ -69,7 +69,7 @@
             this.пазарToolStripMenuItem.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.пазарToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("пазарToolStripMenuItem.Image")));
             this.пазарToolStripMenuItem.Name = "пазарToolStripMenuItem";
-            this.пазарToolStripMenuItem.Size = new System.Drawing.Size(84, 30);
+            this.пазарToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.пазарToolStripMenuItem.Text = "Пазар";
             this.пазарToolStripMenuItem.Click += new System.EventHandler(this.пазарToolStripMenuItem_Click);
             // 
@@ -106,6 +106,7 @@
             this.adminQueue.Size = new System.Drawing.Size(753, 483);
             this.adminQueue.TabIndex = 2;
             this.adminQueue.Visible = false;
+            this.adminQueue.Load += new System.EventHandler(this.adminQueue_Load);
             // 
             // adminMarket
             // 

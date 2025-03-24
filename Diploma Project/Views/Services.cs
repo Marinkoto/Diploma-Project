@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Diploma_Project.Views
             InitializeComponent();
 
             dateTimePicker.MinDate = DateTime.Now;
+            dateTimePicker1.MinDate = DateTime.Now;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -107,6 +109,45 @@ namespace Diploma_Project.Views
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+       
+        private void btnSend1_Click(object sender, EventArgs e)
+        {
+            if (!SignIn.SignedIn)
+                return;
+            ordersTableAdapter.Insert(SignIn.NameOfUser,10,"Консултация",DateTime.Now,dateTimePicker.Value,0,false);
+            ordersTableAdapter.Update(ordersTableAdapter.GetData());
+        }
+
+        private void btnSend2_Click(object sender, EventArgs e)
+        {
+            if (!SignIn.SignedIn)
+                return;
+            ordersTableAdapter.Insert(SignIn.NameOfUser, 50, $"Начало на игра ({cBoxType.SelectedItem})", DateTime.Now, DateTime.Now.AddDays(14), 0, false);
+            ordersTableAdapter.Update(ordersTableAdapter.GetData());
+        }
+
+        private void btnSend3_Click(object sender, EventArgs e)
+        {
+            if (!SignIn.SignedIn)
+                return;
+            ordersTableAdapter.Insert(SignIn.NameOfUser, 250, $"Промотиране на игра", DateTime.Now, dateTimePicker1.Value, 0, false);
+            ordersTableAdapter.Update(ordersTableAdapter.GetData());
         }
     }
 }

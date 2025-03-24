@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Diploma_Project.DatabaseDataSetTableAdapters;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,6 @@ namespace Diploma_Project.Views
     {
         public FlowLayoutPanel Panel => itemHolder;
         public MenuStrip Filters => filterMenuStrip;
-        public DatabaseHelper db;
         public Market()
         {
             InitializeComponent();
@@ -38,26 +38,50 @@ namespace Diploma_Project.Views
         }
         public virtual void LoadMarketItems(string itemType)
         {
-            db = new DatabaseHelper();
-            string query = "SELECT * FROM Products WHERE ProductType = ?";
-            OleDbParameter param = new OleDbParameter("ProductType", OleDbType.VarChar)
-            { 
-                Value =  itemType
-            };
-
-            DataTable dt = db.ExecuteQuery(query, param);
-
-            foreach (DataRow dr in dt.Rows)
+            RemoveAllItems();
+            DataTable dt = productsTableAdapter.GetData();
+            var filteredItems = dt.AsEnumerable().Where(dr => dr["ProductType"].Equals(itemType));
+            foreach (DataRow dr in filteredItems)
             {
+                int gameId = Convert.ToInt32(dr["ID"]);
                 Product product = new Product
                 {
                     Title = dr["ProductName"].ToString(),
                     Price = $"{dr["Price"]}€",
                     Description = dr["Description"].ToString(),
+                    BuyClicked = () => PurchaseGame(SignIn.UserID, gameId),
                 };
                 LoadImageForProduct(product);
                 AddItem(product);
             }
+        }
+        public virtual void PurchaseGame(int userId, int gameId)
+        {
+            var existingPurchase = purchasesTableAdapter.GetData(userId)
+                .AsEnumerable()
+                .FirstOrDefault(row =>row.Field<int>("ProductID") == gameId);
+            if (!SignIn.SignedIn)
+            {
+                MessageBox.Show("Влезте в профила си!","Предупреждение",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (existingPurchase != null)
+            {
+                MessageBox.Show("Играта е закупена вече!\n" +
+                    "Намерете я в Профил -> Моите игри","Предупреждение",
+                    MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                return;
+            }
+            DataRow newRow = purchasesTableAdapter.GetData(userId).NewRow();
+            newRow["UserID"] = userId;
+            newRow["ProductID"] = gameId;
+
+
+
+            purchasesTableAdapter.Insert(userId, gameId);
+
+            purchasesTableAdapter.Update(newRow);
         }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -117,21 +141,18 @@ namespace Diploma_Project.Views
         private void LoadGamesByGenre(string genre)
         {
             RemoveAllItems();
-            string query = "SELECT * FROM Products WHERE Genre = ?";
-            OleDbParameter param = new OleDbParameter("Genre", OleDbType.VarChar)
-            {
-                Value = genre
-            };
+            DataTable dt = productsTableAdapter.GetData();
 
-            DataTable dt = db.ExecuteQuery(query, param);
+            var filteredRows = dt.AsEnumerable()
+                .Where(dr => dr["Genre"].ToString().Equals(genre)).ToList();
 
-            foreach (DataRow dr in dt.Rows)
+            foreach (DataRow dr in filteredRows)
             {
                 Product product = new Product
                 {
                     Title = dr["ProductName"].ToString(),
                     Price = $"{dr["Price"]}€",
-                    Description = dr["Description"].ToString()
+                    Description = dr["Description"].ToString(),
                 };
                 LoadImageForProduct(product);
                 AddItem(product);
@@ -140,13 +161,13 @@ namespace Diploma_Project.Views
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox.Checked)
+            if (checkBox.Checked)
             {
                 DialogResult result = MessageBox.Show("Сигурни ли сте че искате да премахнете избрания от вас филтър?",
                     "Информация",
-                    MessageBoxButtons.OKCancel,MessageBoxIcon.Question,
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2);
-                if(result == DialogResult.OK)
+                if (result == DialogResult.OK)
                 {
                     RemoveAllItems();
                     LoadMarketItems("Game");
@@ -154,7 +175,7 @@ namespace Diploma_Project.Views
                 }
             }
         }
-        private void LoadImageForProduct(Product product)
+        public void LoadImageForProduct(Product product)
         {
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             product.ItemImage = Image.FromFile($@"{baseDirectory}Games\{product.Title}.jpg");

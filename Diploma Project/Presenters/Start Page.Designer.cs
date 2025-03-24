@@ -461,6 +461,7 @@
             this.register.Size = new System.Drawing.Size(930, 426);
             this.register.TabIndex = 19;
             this.register.Tag = "CustomControl";
+            
             // 
             // sendAReport
             // 
@@ -504,12 +505,10 @@
             this.signIn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.signIn1.Location = new System.Drawing.Point(0, 29);
             this.signIn1.Name = "signIn1";
-            this.signIn1.NameOfUser = null;
-            this.signIn1.Password = null;
-            this.signIn1.Role = null;
             this.signIn1.Size = new System.Drawing.Size(930, 426);
             this.signIn1.TabIndex = 29;
             this.signIn1.Tag = "CustomControl";
+            this.signIn1.Visible = false;
             // 
             // StartPage
             // 

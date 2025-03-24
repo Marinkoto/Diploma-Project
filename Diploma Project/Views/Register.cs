@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,33 @@ namespace Diploma_Project.Views
         private void Register_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (txtBoxPassword.Text != txtBoxRepeatPassword.Text)
+            {
+                MessageBox.Show("Паролите не съвпадат!",
+                    "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtBoxUserName.Text))
+            {
+                MessageBox.Show("Въведено е неподходящо име!",
+                    "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            DataTable dt = usersTableAdapter.GetData();
+            var existingUser = dt.AsEnumerable()
+                .FirstOrDefault(dr => dr["NameOfUser"].ToString().Equals(txtBoxUserName.Text));
+            if (existingUser != null)
+            {
+                MessageBox.Show("Потребител с въведеното потребителско име вече съществува!",
+                    "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            usersTableAdapter.Insert(txtBoxUserName.Text, txtBoxPassword.Text, "User");
+            SignIn.SignInCompleted?.Invoke(sender, e);
         }
     }
 }
