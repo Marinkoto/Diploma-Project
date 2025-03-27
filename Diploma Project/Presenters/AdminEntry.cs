@@ -52,5 +52,10 @@ namespace Diploma_Project.Presenters
         {
 
         }
+
+        private void adminQueue_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

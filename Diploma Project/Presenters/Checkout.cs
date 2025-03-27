@@ -37,13 +37,13 @@ namespace Diploma_Project.Presenters
         private void btnRemove_Click(object sender, EventArgs e)
         {
             ordersTableAdapter.DeleteById((int)listBoxCheckOut.SelectedValue);
-            ordersTableAdapter.Update(ordersTableAdapter.GetDataBy(SignIn.NameOfUser));
+            ordersTableAdapter.Update(ordersTableAdapter.GetDataByName(SignIn.NameOfUser));
             LoadListBox();
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            DataTable dt = ordersTableAdapter.GetDataBy(SignIn.NameOfUser);
+            DataTable dt = ordersTableAdapter.GetDataByName(SignIn.NameOfUser);
             foreach (DataRow order in dt.Rows)
             {
                 ordersTableAdapter.UpdateOrder(SignIn.NameOfUser, (bool)order["Completed"], (int)order["ID"]);
@@ -55,7 +55,7 @@ namespace Diploma_Project.Presenters
         private void LoadListBox()
         {
             int lastPrice = 0;
-            DataTable dt = ordersTableAdapter.GetDataBy(SignIn.NameOfUser);
+            DataTable dt = ordersTableAdapter.GetDataByName(SignIn.NameOfUser);
             dt.Columns.Add("DisplayText", typeof(string));
             var filteredOrders = dt.AsEnumerable().
                 Where(order => !Convert.ToBoolean(order["Completed"]));

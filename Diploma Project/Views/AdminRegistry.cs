@@ -8,6 +8,7 @@ namespace Diploma_Project.Views
         public AdminRegistry()
         {
             InitializeComponent();
+            dataGridView1.DataSource = usersTableAdapter.GetData();
         }
         
         private void AdminRegistry_Load(object sender, EventArgs e)

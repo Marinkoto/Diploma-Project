@@ -38,7 +38,7 @@ namespace Diploma_Project.Views
 
         private void MyGames_Load(object sender, EventArgs e)
         {
-            LoadMarketItems("Game");
+            
         }
         public override void LoadMarketItems(string itemType)
         {
@@ -52,13 +52,13 @@ namespace Diploma_Project.Views
             var purchasedGames = purchasesTableAdapter.GetData(SignIn.UserID)
                 .AsEnumerable()
                 .Select(row => row.Field<int>("ProductID"))
-                .ToHashSet(); 
+                .ToHashSet();
 
             foreach (DataRow dr in dt)
             {
                 int gameId = Convert.ToInt32(dr["ID"]);
 
-                if (purchasedGames.Contains(gameId)) 
+                if (purchasedGames.Contains(gameId))
                 {
                     Product product = new Product
                     {

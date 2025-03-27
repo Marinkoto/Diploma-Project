@@ -6,9 +6,11 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.OleDb;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +25,7 @@ namespace Diploma_Project
             CloseAllControls();
             market.LoadMarketItems("Game");
             weeklyDiscounts.LoadMarketItems("Discount");
+            myGames.LoadMarketItems("Game");
         }
 
         private void SignInToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,7 +74,6 @@ namespace Diploma_Project
             {
                 CompleteSignIn();
             };
-
         }
         private void AboutUsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -94,7 +96,6 @@ namespace Diploma_Project
         {
             CloseAllControls();
             myGames.Show();
-            
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

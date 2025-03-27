@@ -130,7 +130,7 @@ namespace Diploma_Project.Views
         {
             if (!SignIn.SignedIn)
                 return;
-            ordersTableAdapter.Insert(SignIn.NameOfUser,10,"Консултация",DateTime.Now,dateTimePicker.Value,0,false);
+            ordersTableAdapter.Insert(SignIn.NameOfUser,10,"Консултация",DateTime.Now,dateTimePicker.Value,false);
             ordersTableAdapter.Update(ordersTableAdapter.GetData());
         }
 
@@ -138,7 +138,7 @@ namespace Diploma_Project.Views
         {
             if (!SignIn.SignedIn)
                 return;
-            ordersTableAdapter.Insert(SignIn.NameOfUser, 50, $"Начало на игра ({cBoxType.SelectedItem})", DateTime.Now, DateTime.Now.AddDays(14), 0, false);
+            ordersTableAdapter.Insert(SignIn.NameOfUser, 50, $"Начало на игра ({cBoxType.SelectedItem})", DateTime.Now, DateTime.Now.AddDays(14), false);
             ordersTableAdapter.Update(ordersTableAdapter.GetData());
         }
 
@@ -146,7 +146,7 @@ namespace Diploma_Project.Views
         {
             if (!SignIn.SignedIn)
                 return;
-            ordersTableAdapter.Insert(SignIn.NameOfUser, 250, $"Промотиране на игра", DateTime.Now, dateTimePicker1.Value, 0, false);
+            ordersTableAdapter.Insert(SignIn.NameOfUser, 250, $"Промотиране на игра", DateTime.Now, dateTimePicker1.Value, false);
             ordersTableAdapter.Update(ordersTableAdapter.GetData());
         }
     }

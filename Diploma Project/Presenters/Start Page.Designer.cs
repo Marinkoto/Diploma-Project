@@ -58,19 +58,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
+            this.signIn1 = new Diploma_Project.Views.SignIn();
             this.services = new Diploma_Project.Views.Services();
             this.weeklyDiscounts = new Diploma_Project.Views.WeeklyDiscounts();
             this.learnUnrealEngine = new Diploma_Project.Views.LearnUnrealEngine();
             this.learnGodot = new Diploma_Project.Views.LearnGodot();
             this.learnUnity = new Diploma_Project.Views.LearnUnity();
             this.contacts = new Diploma_Project.Views.Contacts();
-            this.myGames = new Diploma_Project.Views.MyGames();
             this.register = new Diploma_Project.Views.Register();
             this.sendAReport = new Diploma_Project.Views.SendAReport();
             this.market = new Diploma_Project.Views.Market();
             this.learningMaterials = new Diploma_Project.Views.LearningMaterials();
             this.aboutUs = new Diploma_Project.Views.AboutUs();
-            this.signIn1 = new Diploma_Project.Views.SignIn();
+            this.myGames = new Diploma_Project.Views.MyGames();
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
             this.groupBox.SuspendLayout();
@@ -384,6 +384,17 @@
             this.Title.TabIndex = 14;
             this.Title.Text = "Влезте в своя профил!";
             // 
+            // signIn1
+            // 
+            this.signIn1.AdminEntry = null;
+            this.signIn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.signIn1.Location = new System.Drawing.Point(0, 29);
+            this.signIn1.Name = "signIn1";
+            this.signIn1.Size = new System.Drawing.Size(930, 426);
+            this.signIn1.TabIndex = 29;
+            this.signIn1.Tag = "CustomControl";
+            this.signIn1.Visible = false;
+            // 
             // services
             // 
             this.services.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
@@ -444,15 +455,6 @@
             this.contacts.Tag = "CustomControl";
             this.contacts.Visible = false;
             // 
-            // myGames
-            // 
-            this.myGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.myGames.Location = new System.Drawing.Point(0, 29);
-            this.myGames.Name = "myGames";
-            this.myGames.Size = new System.Drawing.Size(930, 426);
-            this.myGames.TabIndex = 22;
-            this.myGames.Tag = "CustomControl";
-            // 
             // register
             // 
             this.register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
@@ -461,7 +463,6 @@
             this.register.Size = new System.Drawing.Size(930, 426);
             this.register.TabIndex = 19;
             this.register.Tag = "CustomControl";
-            
             // 
             // sendAReport
             // 
@@ -499,16 +500,14 @@
             this.aboutUs.TabIndex = 16;
             this.aboutUs.Tag = "CustomControl";
             // 
-            // signIn1
+            // myGames
             // 
-            this.signIn1.AdminEntry = null;
-            this.signIn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.signIn1.Location = new System.Drawing.Point(0, 29);
-            this.signIn1.Name = "signIn1";
-            this.signIn1.Size = new System.Drawing.Size(930, 426);
-            this.signIn1.TabIndex = 29;
-            this.signIn1.Tag = "CustomControl";
-            this.signIn1.Visible = false;
+            this.myGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.myGames.Location = new System.Drawing.Point(0, 29);
+            this.myGames.Name = "myGames";
+            this.myGames.Size = new System.Drawing.Size(930, 426);
+            this.myGames.TabIndex = 30;
+            this.myGames.Tag = "CustomControl";
             // 
             // StartPage
             // 
@@ -518,6 +517,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(912, 448);
+            this.Controls.Add(this.myGames);
             this.Controls.Add(this.signIn1);
             this.Controls.Add(this.services);
             this.Controls.Add(this.weeklyDiscounts);
@@ -525,7 +525,6 @@
             this.Controls.Add(this.learnGodot);
             this.Controls.Add(this.learnUnity);
             this.Controls.Add(this.contacts);
-            this.Controls.Add(this.myGames);
             this.Controls.Add(this.register);
             this.Controls.Add(this.sendAReport);
             this.Controls.Add(this.market);
@@ -590,7 +589,6 @@
         private Views.Market market;
         private Views.Register register;
         private Views.SendAReport sendAReport;
-        private Views.MyGames myGames;
         private Views.Contacts contacts;
         private Views.LearnUnity learnUnity;
         private Views.LearnGodot learnGodot;
@@ -598,6 +596,7 @@
         private Views.WeeklyDiscounts weeklyDiscounts;
         private Views.Services services;
         private Views.SignIn signIn1;
+        private Views.MyGames myGames;
     }
 }
 

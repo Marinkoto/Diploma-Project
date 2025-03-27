@@ -8,7 +8,6 @@
         private System.Windows.Forms.ToolStripMenuItem поръчкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem потребителиToolStripMenuItem;
         private Views.AdminMarket adminMarket;
-        private Views.AdminQueue adminQueue;
         private Views.AdminRegistry adminRegistry;
         /// <summary>
         /// Required designer variable.
@@ -60,7 +59,7 @@
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Name = "Menu";
             this.Menu.Padding = new System.Windows.Forms.Padding(150, 0, 0, 0);
-            this.Menu.Size = new System.Drawing.Size(735, 24);
+            this.Menu.Size = new System.Drawing.Size(982, 24);
             this.Menu.TabIndex = 0;
             this.Menu.Text = "Menu";
             // 
@@ -101,12 +100,11 @@
             // adminQueue
             // 
             this.adminQueue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.adminQueue.Location = new System.Drawing.Point(0, 27);
+            this.adminQueue.Location = new System.Drawing.Point(0, 32);
             this.adminQueue.Name = "adminQueue";
-            this.adminQueue.Size = new System.Drawing.Size(753, 483);
-            this.adminQueue.TabIndex = 2;
-            this.adminQueue.Visible = false;
-            this.adminQueue.Load += new System.EventHandler(this.adminQueue_Load);
+            this.adminQueue.Size = new System.Drawing.Size(1000, 483);
+            this.adminQueue.TabIndex = 4;
+            this.adminQueue.Load += new System.EventHandler(this.adminQueue_Load_1);
             // 
             // adminMarket
             // 
@@ -130,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(735, 543);
+            this.ClientSize = new System.Drawing.Size(982, 543);
             this.Controls.Add(this.adminQueue);
             this.Controls.Add(this.adminMarket);
             this.Controls.Add(this.adminRegistry);
@@ -151,5 +149,7 @@
 
         }
         #endregion
+
+        private Views.AdminQueue adminQueue;
     }
 }
