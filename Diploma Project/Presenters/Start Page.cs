@@ -23,9 +23,10 @@ namespace Diploma_Project
         {
             InitializeComponent();
             CloseAllControls();
-            market.LoadMarketItems("Game");
-            weeklyDiscounts.LoadMarketItems("Discount");
-            myGames.LoadMarketItems("Game");
+            market.LoadMarketItems("Игра");
+            weeklyDiscounts.LoadMarketItems("Намаление");
+            newReleases.LoadMarketItems("Ново заглавие");
+            freeGames.LoadMarketItems("Безплатна игра");
         }
 
         private void SignInToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,16 +51,18 @@ namespace Diploma_Project
 
         private void CompleteSignIn()
         {
-            CheckOutToolStripMenuItem.Visible = true;
+            CheckOuttoolStripMenuItem.Visible = true;
             MyGamesToolStripMenuItem.Visible = true;
             SignInToolStripMenuItem.Visible = false;
             RegistrationToolStripMenuItem.Visible = false;
+            SignOutToolStripMenuItem.Visible = true;
             SignIn.SignedIn = true;
             CloseAllControls();
             Title.Text = "Добре Дошли!";
             Title.Location = new Point(325, 40);
             MessageBox.Show("Влизането бе успешно!","Успех!",MessageBoxButtons.OK,
                 MessageBoxIcon.Information,MessageBoxDefaultButton.Button1);
+            this.Text = $"Gamehub - {SignIn.NameOfUser}";
         }
 
         private void RegistrationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +88,7 @@ namespace Diploma_Project
         {
             CloseAllControls();
             market.Show();
+            market.LoadMarketItems("Игра");
         }
 
         private void market_Load(object sender, EventArgs e)
@@ -96,6 +100,7 @@ namespace Diploma_Project
         {
             CloseAllControls();
             myGames.Show();
+            myGames.LoadMarketItems("Игра");
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -165,6 +170,48 @@ namespace Diploma_Project
         {
             Checkout checkout = new Checkout();
             checkout.Show();
+        }
+
+        private void FreeGamesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseAllControls();
+            freeGames.Show();
+            freeGames.LoadMarketItems("Безплатна игра");
+        }
+
+        private void NewTitlesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseAllControls();
+            newReleases.Show();
+            newReleases.LoadMarketItems("Ново заглавие");
+        }
+
+        private void WeeklyDiscountstoolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            CloseAllControls();
+            weeklyDiscounts.Show();
+        }
+
+        private void CheckOuttoolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Checkout checkOut = new Checkout();
+            checkOut.Show();
+        }
+
+        private void SignOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show($"Сигурни ли сте че искате да излезнете от профила си?",
+                "Предупреждение", MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3);
+            if(result == DialogResult.Yes)
+            {
+                Application.Restart();
+            }            
+        }
+
+        private void MarketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

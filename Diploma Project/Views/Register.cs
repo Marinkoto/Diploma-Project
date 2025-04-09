@@ -56,7 +56,9 @@ namespace Diploma_Project.Views
                     "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            usersTableAdapter.Insert(txtBoxUserName.Text, txtBoxPassword.Text, "User");
+            SignIn.NameOfUser = txtBoxUserName.Text;
+            usersTableAdapter.Insert(txtBoxUserName.Text, txtBoxPassword.Text, "User", 0);
+            SignIn.UserID = Convert.ToInt32(usersTableAdapter.GetLastInsertedId());
             SignIn.SignInCompleted?.Invoke(sender, e);
         }
     }

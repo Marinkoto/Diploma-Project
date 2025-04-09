@@ -19,42 +19,29 @@ namespace Diploma_Project.Views
         {
             InitializeComponent();
             Filters.Visible = false;
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://margata.itch.io/potomania");
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://margata.itch.io/phrase-fighters");
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://margata.itch.io/the-kift");
+            Panel.FlowDirection = FlowDirection.TopDown;
+            Panel.Padding = new Padding(0, 35, 0, 0);
+            Panel.WrapContents = true;
+            Panel.AutoScroll = true;
         }
 
         private void MyGames_Load(object sender, EventArgs e)
         {
             
         }
+
         public override void LoadMarketItems(string itemType)
         {
             RemoveAllItems();
 
-            var dt = productsTableAdapter.GetData()
-                .AsEnumerable()
-                .Where(dr => dr["ProductType"].ToString().Equals(itemType))
-                .ToList();
+            DataTable dt = productsTableAdapter.GetData();
 
             var purchasedGames = purchasesTableAdapter.GetData(SignIn.UserID)
                 .AsEnumerable()
                 .Select(row => row.Field<int>("ProductID"))
                 .ToHashSet();
 
-            foreach (DataRow dr in dt)
+            foreach (DataRow dr in dt.Rows)
             {
                 int gameId = Convert.ToInt32(dr["ID"]);
 
@@ -73,11 +60,9 @@ namespace Diploma_Project.Views
             }
         }
 
-        public bool HasUserPurchasedGame(int userId, int gameId)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var purchases = purchasesTableAdapter.GetData(userId);
 
-            return purchases.AsEnumerable().Any(row => row.Field<int>("ProductID") == gameId);
         }
     }
 }

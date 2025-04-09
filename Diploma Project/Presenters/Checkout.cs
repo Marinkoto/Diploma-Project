@@ -9,6 +9,7 @@ namespace Diploma_Project.Presenters
 {
     public partial class Checkout : Form
     {
+        public int FinalCostOfCustomer { get; set; }
         public Checkout()
         {
             InitializeComponent();
@@ -43,31 +44,27 @@ namespace Diploma_Project.Presenters
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            DataTable dt = ordersTableAdapter.GetDataByName(SignIn.NameOfUser);
-            foreach (DataRow order in dt.Rows)
-            {
-                ordersTableAdapter.UpdateOrder(SignIn.NameOfUser, (bool)order["Completed"], (int)order["ID"]);
-            }
             MessageBox.Show("Изпратихте успешно поръчката!", "Информация", 
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+            usersTableAdapter.UpdateFinalCost(FinalCostOfCustomer,SignIn.NameOfUser);
+            FinalCostOfCustomer = 0;
             this.Close();
         }
         private void LoadListBox()
         {
-            int lastPrice = 0;
             DataTable dt = ordersTableAdapter.GetDataByName(SignIn.NameOfUser);
             dt.Columns.Add("DisplayText", typeof(string));
-            var filteredOrders = dt.AsEnumerable().
-                Where(order => !Convert.ToBoolean(order["Completed"]));
+            var filteredOrders = dt.AsEnumerable()
+                .Where(order => !Convert.ToBoolean(order["Completed"]) && Convert.ToDateTime(order["StartDate"]) >= DateTime.Now.AddSeconds(-30));
             
             foreach (DataRow order in filteredOrders)
             {
                 string displayText = $"{order["Cost"]}€ {order["TypeOfService"]} Дата на поръчка: {order["StartDate"]}";
-                lastPrice += Convert.ToInt32(order["Cost"]);
+                FinalCostOfCustomer += Convert.ToInt32(order["Cost"]);
                 order["DisplayText"] = displayText;
             }
 
-            lblLastPrice.Text = $"Крайна цена с ДДС {lastPrice}€";
+            lblLastPrice.Text = $"Крайна цена с ДДС {FinalCostOfCustomer}€";
             listBoxCheckOut.DataSource = filteredOrders.AsDataView();
             listBoxCheckOut.ValueMember = "ID";
             listBoxCheckOut.DisplayMember = "DisplayText";

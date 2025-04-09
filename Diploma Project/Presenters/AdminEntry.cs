@@ -32,6 +32,7 @@ namespace Diploma_Project.Presenters
         {
             adminMarket.Show();
             adminQueue.Hide();
+            adminRegistry.Hide();
         }
 
         private void услугиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,6 +57,11 @@ namespace Diploma_Project.Presenters
         private void adminQueue_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void изходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

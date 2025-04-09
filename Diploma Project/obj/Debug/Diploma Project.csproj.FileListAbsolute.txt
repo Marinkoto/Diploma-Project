@@ -1,7 +1,3 @@
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\App.config
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.exe.config
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.exe
-Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.pdb
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.csproj.AssemblyReference.cache
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.csproj.SuggestedBindingRedirects.cache
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Presenters.AdminEntry.resources
@@ -12,10 +8,12 @@ Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diplo
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminQueue.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.AdminRegistry.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Contacts.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.FreeGames.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnGodot.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearningMaterials.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnUnity.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.LearnUnrealEngine.resources
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.NewReleases.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Product.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.Market.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.MyGames.resources
@@ -27,5 +25,49 @@ Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diplo
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma_Project.Views.WeeklyDiscounts.resources
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.csproj.GenerateResource.cache
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.csproj.CoreCompileInputs.cache
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\App.config
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.exe.config
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.exe
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Diploma Project.pdb
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.exe
 Z:\Projects\Console Applications\Diploma Project\Diploma Project\obj\Debug\Diploma Project.pdb
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Godot.pdf
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Unity.pdf
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Unreal Engine.pdf
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Among Us.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Assassin's Creed.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Auto Pirates Captains Cup.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Call of Dragons.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Counter-Strike 2.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Cuphead.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Dead Cells.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Destiny 2.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Don't Starve.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Factorio.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Fortnite.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Genshin Impact.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Geometry Dash.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Hollow Knight Silksong.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Hollow Knight.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Honkai Star Rail.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\INSIDE.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Left 4 Dead 2.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Lethal Company.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\LIMBO.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Papers, Please.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\People Playground.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Portal 2.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Portal.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Slay the Spire.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Stardew Valley.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Super Meat Boy.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Terraria.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\The Binding of Isaac Rebirth.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\The Escapists.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\The Forest.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\The Longing.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Triviador.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Undertale.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Valorant.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\Vampire Survivors.jpg
+Z:\Projects\Console Applications\Diploma Project\Diploma Project\bin\Debug\Games\WoT Blitz Reforged Update.jpg

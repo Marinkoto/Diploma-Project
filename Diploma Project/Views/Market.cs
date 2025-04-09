@@ -18,6 +18,8 @@ namespace Diploma_Project.Views
     {
         public FlowLayoutPanel Panel => itemHolder;
         public MenuStrip Filters => filterMenuStrip;
+        public CheckBox AllFiltersBox => checkBox;
+
         public Market()
         {
             InitializeComponent();
@@ -59,39 +61,33 @@ namespace Diploma_Project.Views
         {
             var existingPurchase = purchasesTableAdapter.GetData(userId)
                 .AsEnumerable()
-                .FirstOrDefault(row =>row.Field<int>("ProductID") == gameId);
+                .FirstOrDefault(row => row.Field<int>("ProductID") == gameId);
             if (!SignIn.SignedIn)
             {
-                MessageBox.Show("Влезте в профила си!","Предупреждение",
+                MessageBox.Show("Влезте в профила си!", "Предупреждение",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (existingPurchase != null)
             {
                 MessageBox.Show("Играта е закупена вече!\n" +
-                    "Намерете я в Профил -> Моите игри","Предупреждение",
-                    MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    "Намерете я в Профил -> Моите игри", "Предупреждение",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             DataRow newRow = purchasesTableAdapter.GetData(userId).NewRow();
             newRow["UserID"] = userId;
             newRow["ProductID"] = gameId;
 
-
-
             purchasesTableAdapter.Insert(userId, gameId);
-
+            MessageBox.Show($"Успешно закупихте играта!\n" +
+                "Намерете я в Профил -> Моите игри", "Успех",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             purchasesTableAdapter.Update(newRow);
         }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void vScrollBar_Scroll(object sender, ScrollEventArgs e)
-        {
-            //itemHolder.VerticalScroll.Value = vScrollBar.Value; 
-            //itemHolder.Invalidate();
         }
 
         private void Market_Load(object sender, EventArgs e)
@@ -144,15 +140,18 @@ namespace Diploma_Project.Views
             DataTable dt = productsTableAdapter.GetData();
 
             var filteredRows = dt.AsEnumerable()
-                .Where(dr => dr["Genre"].ToString().Equals(genre)).ToList();
+                .Where(dr => dr["Genre"].ToString().Equals(genre) 
+                && dr["ProductType"].ToString().Equals("Игра")).ToList();
 
             foreach (DataRow dr in filteredRows)
             {
+                int gameId = Convert.ToInt32(dr["ID"]);
                 Product product = new Product
                 {
                     Title = dr["ProductName"].ToString(),
                     Price = $"{dr["Price"]}€",
                     Description = dr["Description"].ToString(),
+                    BuyClicked = () => PurchaseGame(SignIn.UserID,gameId)
                 };
                 LoadImageForProduct(product);
                 AddItem(product);
@@ -170,7 +169,7 @@ namespace Diploma_Project.Views
                 if (result == DialogResult.OK)
                 {
                     RemoveAllItems();
-                    LoadMarketItems("Game");
+                    LoadMarketItems("Игра");
                     checkBox.Checked = false;
                 }
             }

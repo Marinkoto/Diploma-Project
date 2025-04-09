@@ -173,6 +173,26 @@ namespace Diploma_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Exit_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Exit Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Free_Games {
+            get {
+                object obj = ResourceManager.GetObject("Free Games", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Game_Hub_Logo {
             get {
                 object obj = ResourceManager.GetObject("Game_Hub_Logo", resourceCulture);
@@ -246,6 +266,26 @@ namespace Diploma_Project.Properties {
         internal static System.Drawing.Bitmap Market_Icon {
             get {
                 object obj = ResourceManager.GetObject("Market Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap My_Games {
+            get {
+                object obj = ResourceManager.GetObject("My Games", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_Releases {
+            get {
+                object obj = ResourceManager.GetObject("New Releases", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

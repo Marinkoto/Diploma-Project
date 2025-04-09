@@ -48,6 +48,7 @@
             this.numericUpDownId = new System.Windows.Forms.NumericUpDown();
             this.usersTableAdapter = new Diploma_Project.DatabaseDataSetTableAdapters.UsersTableAdapter();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
@@ -179,7 +180,7 @@
             this.btnАdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnАdd.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnАdd.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnАdd.Location = new System.Drawing.Point(764, 378);
+            this.btnАdd.Location = new System.Drawing.Point(762, 378);
             this.btnАdd.Name = "btnАdd";
             this.btnАdd.Size = new System.Drawing.Size(93, 30);
             this.btnАdd.TabIndex = 18;
@@ -196,9 +197,9 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemove.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRemove.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnRemove.Location = new System.Drawing.Point(865, 378);
+            this.btnRemove.Location = new System.Drawing.Point(863, 378);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(101, 30);
+            this.btnRemove.Size = new System.Drawing.Size(105, 30);
             this.btnRemove.TabIndex = 19;
             this.btnRemove.Text = "Премахни";
             this.btnRemove.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -264,7 +265,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSave.ForeColor = System.Drawing.Color.LightCyan;
-            this.btnSave.Location = new System.Drawing.Point(764, 414);
+            this.btnSave.Location = new System.Drawing.Point(762, 414);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 30);
             this.btnSave.TabIndex = 25;
@@ -273,11 +274,29 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.LightCyan;
+            this.btnRefresh.Location = new System.Drawing.Point(863, 414);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(105, 30);
+            this.btnRefresh.TabIndex = 26;
+            this.btnRefresh.Text = "Презареди";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // AdminQueue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.numericUpDownId);
             this.Controls.Add(this.label7);
@@ -329,5 +348,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownId;
         private DatabaseDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

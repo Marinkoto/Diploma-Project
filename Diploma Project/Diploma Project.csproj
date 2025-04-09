@@ -70,13 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ButtonUtils.cs" />
-    <Compile Include="DatabaseDataSet.cs">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseDataSet.Designer.cs">
+    <Compile Include="DataTableDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>DataTableDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Presenters\AdminEntry.cs">
       <SubType>Form</SubType>
@@ -127,6 +124,12 @@
     <Compile Include="Views\Contacts.Designer.cs">
       <DependentUpon>Contacts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FreeGames.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FreeGames.Designer.cs">
+      <DependentUpon>FreeGames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\LearnGodot.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +153,12 @@
     </Compile>
     <Compile Include="Views\LearnUnrealEngine.Designer.cs">
       <DependentUpon>LearnUnrealEngine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewReleases.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewReleases.Designer.cs">
+      <DependentUpon>NewReleases.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Product.cs">
       <SubType>UserControl</SubType>
@@ -233,6 +242,9 @@
     <EmbeddedResource Include="Views\Contacts.resx">
       <DependentUpon>Contacts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FreeGames.resx">
+      <DependentUpon>FreeGames.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\LearnGodot.resx">
       <DependentUpon>LearnGodot.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LearnUnrealEngine.resx">
       <DependentUpon>LearnUnrealEngine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewReleases.resx">
+      <DependentUpon>NewReleases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
@@ -272,16 +287,19 @@
     <EmbeddedResource Include="Views\WeeklyDiscounts.resx">
       <DependentUpon>WeeklyDiscounts.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DatabaseDataSet.xsc">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    <None Include="DataTableDataSet.xsc">
+      <DependentUpon>DataTableDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
+    <None Include="DataTableDataSet.xsd">
       <SubType>Designer</SubType>
-      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataTableDataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DatabaseDataSet.xss">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    <None Include="DataTableDataSet.xss">
+      <DependentUpon>DataTableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Godot.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -292,6 +310,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Unity.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Unreal Engine.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -300,7 +324,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Accessories\" />
-    <Folder Include="Views\Games\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo %282%29.png" />
@@ -458,6 +481,121 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Models\Database.accdb" />
+    <Content Include="Games\Among Us.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Assassin%27s Creed.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Auto Pirates Captains Cup.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Call of Dragons.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Counter-Strike 2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Cuphead.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Dead Cells.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Destiny 2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Don%27t Starve.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Factorio.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Fortnite.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Genshin Impact.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Geometry Dash.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Hollow Knight Silksong.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Hollow Knight.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Honkai Star Rail.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\INSIDE.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Left 4 Dead 2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Lethal Company.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\LIMBO.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Papers, Please.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\People Playground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Portal 2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Portal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Slay the Spire.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Stardew Valley.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Super Meat Boy.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Terraria.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\The Binding of Isaac Rebirth.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\The Escapists.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\The Forest.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\The Longing.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Triviador.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Undertale.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Valorant.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\Vampire Survivors.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Games\WoT Blitz Reforged Update.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Exit Icon.png" />
+    <None Include="Resources\Free Games.png" />
+    <None Include="Resources\New Releases.png" />
+    <None Include="Resources\My Games.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,24 +35,7 @@ namespace Diploma_Project.Views
             if (DesignMode)
                 return;
 
-            DataTable odt = ordersTableAdapter.GetData();
-
-            var filter1 = odt.AsEnumerable()
-                            .Where(order => Convert.ToBoolean(order["Completed"]) == false);
-
-            if (filter1.Any())
-                dataGridView1.DataSource = filter1.CopyToDataTable();
-            else
-                dataGridView1.DataSource = null;
-
-            var filter2 = odt.AsEnumerable()
-                            .Where(order => Convert.ToBoolean(order["Completed"]) == true);
-
-            if (filter2.Any())
-                dataGridView2.DataSource = filter2.CopyToDataTable();
-            else
-                dataGridView2.DataSource = null;
-
+            btnRefresh_Click(new object(), e);
             DataTable udt = usersTableAdapter.GetData();
 
             foreach (DataRow dr in udt.Rows)
@@ -82,6 +67,11 @@ namespace Diploma_Project.Views
                 DateTime.Now, dateTimePicker.Value, false);
                 MessageBox.Show($"Успешно добавихте нов запис!",
                 "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"Грешно въведени данни!",
+                    "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.ordersTableAdapter.Fill(this.databaseDataSet.Orders);
@@ -116,7 +106,8 @@ namespace Diploma_Project.Views
 
             DialogResult result = MessageBox.Show($"Сигурни ли сте че искате да изтриете запис с ИД {numericUpDownId.Value}?" +
                 $"\nТова действие е необратимо!",
-                "Предупреждение", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                "Предупреждение", MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Warning,MessageBoxDefaultButton.Button3);
 
             if (result == DialogResult.Yes)
             {
@@ -137,7 +128,7 @@ namespace Diploma_Project.Views
 
                 if (filter2.Any())
                 {
-                    dataGridView1.DataSource = filter2.CopyToDataTable();
+                    dataGridView2.DataSource = filter2.CopyToDataTable();
                 }
                 dataGridView2.Refresh();
             }
@@ -147,24 +138,48 @@ namespace Diploma_Project.Views
         {
             try
             {
-                this.ordersTableAdapter.Fill(this.databaseDataSet.Orders); 
+                dataGridView1.EndEdit();
+                databaseDataSet.Orders.Merge((DataTable)dataGridView1.DataSource);
+                DataTable changes = databaseDataSet.Orders.GetChanges();
+
+                if (changes != null) 
+                {
+                    this.ordersTableAdapter.Update(databaseDataSet.Orders);
+
+                    databaseDataSet.Orders.AcceptChanges();
+                }
+
+                this.ordersTableAdapter.Fill(this.databaseDataSet.Orders);
+                dataGridView1.DataSource = this.databaseDataSet.Orders;
                 dataGridView1.Refresh();
 
-                var filter2 = databaseDataSet.Orders.AsEnumerable()
-                   .Where(order => order.Field<bool>("Completed") == true);
-
-                if (filter2.Any())
-                {
-                    dataGridView1.DataSource = filter2.CopyToDataTable();
-                }
-                dataGridView2.Refresh();
                 MessageBox.Show("Промените са запазени успешно!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Грешка при запазване: ", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Грешка при запазване: " + ex.Message, "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            DataTable odt = ordersTableAdapter.GetData();
+
+            var filter1 = odt.AsEnumerable()
+                            .Where(order => Convert.ToBoolean(order["Completed"]) == false);
+
+            if (filter1.Any())
+                dataGridView1.DataSource = filter1.CopyToDataTable();
+            else
+                dataGridView1.DataSource = null;
+
+            var filter2 = odt.AsEnumerable()
+                            .Where(order => Convert.ToBoolean(order["Completed"]) == true);
+
+            if (filter2.Any())
+                dataGridView2.DataSource = filter2.CopyToDataTable();
+            else
+                dataGridView2.DataSource = null;
         }
     }
 }

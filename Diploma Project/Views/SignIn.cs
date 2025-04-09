@@ -20,8 +20,9 @@ namespace Diploma_Project.Views
         public static EventHandler SignInCompleted;
 
         public static bool SignedIn { get; set; }
-        public static int UserID { get; private set; }
-        public static string NameOfUser { get; private set; }
+        public static int UserID { get; set; }
+        public static string NameOfUser { get; set; }
+
         public SignIn()
         {
             InitializeComponent();
@@ -38,8 +39,6 @@ namespace Diploma_Project.Views
             var userRow = dt.AsEnumerable()
                 .FirstOrDefault(dr => dr["NameOfUser"].ToString().Equals(txtBoxUserName.Text) &&
                                       dr["Password"].ToString().Equals(txtBoxPassword.Text));
-            NameOfUser = userRow["NameOfUser"].ToString();
-            UserID = Convert.ToInt32(userRow["ID"]);
             if (userRow == null)
             {
                 MessageBox.Show("Грешно въведено име или парола!",
@@ -53,6 +52,8 @@ namespace Diploma_Project.Views
             }
             else
             {
+                NameOfUser = userRow["NameOfUser"].ToString();
+                UserID = Convert.ToInt32(userRow["ID"]);
                 SignInCompleted?.Invoke(this, new EventArgs());
             }
         }
@@ -62,6 +63,11 @@ namespace Diploma_Project.Views
         }
 
         private void lblUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }

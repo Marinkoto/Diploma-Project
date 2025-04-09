@@ -34,6 +34,7 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.lblLastPrice = new System.Windows.Forms.Label();
             this.ordersTableAdapter = new Diploma_Project.DatabaseDataSetTableAdapters.OrdersTableAdapter();
+            this.usersTableAdapter = new Diploma_Project.DatabaseDataSetTableAdapters.UsersTableAdapter();
             this.SuspendLayout();
             // 
             // listBoxCheckOut
@@ -88,7 +89,7 @@
             this.btnRemove.ForeColor = System.Drawing.Color.LightCyan;
             this.btnRemove.Location = new System.Drawing.Point(130, 358);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(97, 30);
+            this.btnRemove.Size = new System.Drawing.Size(110, 30);
             this.btnRemove.TabIndex = 19;
             this.btnRemove.Text = "Премахни";
             this.btnRemove.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -100,7 +101,7 @@
             this.lblLastPrice.AutoSize = true;
             this.lblLastPrice.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblLastPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLastPrice.Location = new System.Drawing.Point(233, 361);
+            this.lblLastPrice.Location = new System.Drawing.Point(246, 361);
             this.lblLastPrice.Name = "lblLastPrice";
             this.lblLastPrice.Size = new System.Drawing.Size(221, 23);
             this.lblLastPrice.TabIndex = 20;
@@ -109,6 +110,10 @@
             // ordersTableAdapter
             // 
             this.ordersTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // Checkout
             // 
@@ -138,5 +143,6 @@
         private System.Windows.Forms.Button btnRemove;
         private DatabaseDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;
         private System.Windows.Forms.Label lblLastPrice;
+        private DatabaseDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
     }
 }
